@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+        }
+
+
+        button {
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 25px;
+
+        }
+
+        p {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WELCOME TO HEXA DECIMAL COLOR CODE</h1>
+    <p>#000000
+
+    </p>
+    <button onclick="demo()">Generate color</button>
+
+
+    <script>
+        function demo() {
+            let arr = ['a', 'A', 'B', 'b', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            let color="#"
+            for (i = 0; i <= 5; i++) {
+                let a = Math.floor(Math.random() * arr.length)
+                console.log(a)
+                console.log(arr[a])
+                color+=arr[a]
+
+            }
+            console.log(color)
+            document.querySelector("p").innerHTML=color
+            document.querySelector("body").style.backgroundColor=color;
+        }
+    </script>
+</body>
+
+</html>
